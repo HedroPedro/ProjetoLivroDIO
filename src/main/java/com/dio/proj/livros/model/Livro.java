@@ -31,8 +31,10 @@ public class Livro {
     private String titulo;
     private String autor;
     private Float preco;
+    private Integer quantidade;
 
     @OneToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "livro_generosLiterarios_id")
     private List<GenerosLiterarios> generosLiterarios;
+
 }
