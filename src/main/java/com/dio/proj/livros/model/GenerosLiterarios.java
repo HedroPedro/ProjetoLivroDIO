@@ -7,12 +7,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import jakarta.persistence.GenerationType;
 
 @Entity
 @Table(name = "tb_generosLiterarios")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class GenerosLiterarios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +25,5 @@ public class GenerosLiterarios {
 
     @Column(name = "generosLiterarios_name", length = 50, nullable = false)
     private String name;
+    
 }
